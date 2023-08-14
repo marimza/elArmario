@@ -1,3 +1,8 @@
+$blanco: white;
+$fuente-principal: "Poppins", sans-serif;
+$color-fondo: #f9f5f0;
+$negro: black;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -7,8 +12,8 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f5f0;
+    font-family: $fuente-principal;
+    background-color: $color-fondo;
 }
 
 a:hover {
@@ -55,8 +60,6 @@ footer {
         border-radius: 4px;
     }
 }
-
-
 
 .categorias {
     height: 600px;
@@ -106,7 +109,7 @@ footer {
 
 
 .texto-secciones {
-    background-color: black;
+    background-color: $negro;
     text-decoration: none;
     font-size: 35px;
     transition: 0.5s;
@@ -145,9 +148,9 @@ footer {
         margin-top: 1rem;
         margin-bottom: 1rem;
         border-radius: 10px;
-        border: solid black;
-        background-color: black;
-        color: white;
+        border: solid $negro;
+        background-color: $negro;
+        color: $blanco;
         width: 15rem;
     }
 }
@@ -164,7 +167,7 @@ footer {
     gap: 25px;
 
     .contenedor-producto {
-        background-color: white;
+        background-color: $blanco;
         border-radius: 8px;
         display: flex;
         flex-direction: column;
@@ -180,8 +183,8 @@ footer {
         }
 
         .boton-agregar {
-            background-color: black;
-            color: white;
+            background-color: $negro;
+            color: $blanco;
             width: 50%;
             border-radius: 12px;
             margin-bottom: 10px;

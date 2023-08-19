@@ -159,7 +159,10 @@ footer .copyright {
   width: 11rem;
 }
 .grilla-productos .contenedor-producto .nombre-producto {
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+.grilla-productos .contenedor-producto p {
+  font-size: 0.9rem;
 }
 .grilla-productos .contenedor-producto .boton-agregar {
   background-color: black;

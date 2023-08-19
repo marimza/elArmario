@@ -1,0 +1,250 @@
+body {
+    font-family: $fuente-principal;
+    background-color: $color-fondo;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+
+    .copyright {
+        border-top: solid grey 1px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+
+
+/*------  INDEX ------ */
+
+.banner {
+    background-image: linear-gradient(100deg, #000000, #00000020), url('../imgs/imginicio5.png');
+    /* background-position: center; */
+    background-size: cover;
+    height: 600px;
+}
+
+.texto-banner {
+    font-size: 40px;
+}
+
+
+.linea-informes {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    justify-content: space-around;
+
+    .informe {
+        font-size: 18px;
+        padding: 5px;
+        border-radius: 4px;
+    }
+}
+
+.categorias {
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "buzos rempant"
+        "accesorios rempant";
+    padding: 0;
+
+    .remera-pantalon {
+        background-image: url('../imgs/remerapantalon.jpg');
+        background-size: cover;
+        background-position: center;
+        grid-area: rempant;
+        text-align: center;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .buzos {
+        background-image: url('../imgs/buzo.jpg');
+        background-size: cover;
+        background-position: center;
+        grid-area: buzos;
+        text-align: center;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .accesorios {
+        background-image: url('../imgs/accesorios.jpg');
+        background-size: cover;
+        background-position: center;
+        grid-area: accesorios;
+        text-align: center;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+}
+
+
+.texto-secciones {
+    background-color: $negro;
+    text-decoration: none;
+    font-size: 35px;
+    transition: 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+/* CONTACTO */
+
+.izq {
+    background-image: url('../imgs/fondo-transp.png');
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+}
+
+.formulario {
+    width: 40%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .legend-form {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .item-form {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        border: solid $negro;
+        background-color: $negro;
+        color: $blanco;
+        width: 15rem;
+    }
+}
+
+/*BUZOS, REMERAS Y PANTALONES, ACCESORIOS*/
+
+.grilla-productos {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 25px;
+
+    .contenedor-producto {
+        background-color: $blanco;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: box-shadow 0.3s;
+        &:hover{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .img-grilla {
+            width: 11rem;
+        }
+
+        .nombre-producto {
+            font-size: 1rem;
+        }
+        p{
+            font-size: 0.9rem;
+        }
+
+        .boton-agregar {
+            background-color: $negro;
+            color: $blanco;
+            width: 50%;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            padding: 5px;
+        }
+    }
+}
+
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 768px) {
+    .secciones-inicio {
+        grid-template-areas: "buzos rempant""accesorios accesorios";
+    }
+
+    .grilla-productos {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+
+        .contenedor-producto {
+            width: 90%;
+            margin-left: 20px;
+        }
+    }
+
+    .textos-inicio {
+        flex-direction: column;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 8%;
+    }
+
+    .contacto {
+        flex-direction: column;
+        justify-content: center;
+
+        .izq {
+            width: 100%;
+            height: 200px;
+
+            .texto-form {
+                font-size: 15px;
+            }
+
+        }
+
+        .formulario {
+            width: 90%;
+        }
+
+    }
+
+    .texto-secciones {
+        font-size: 17px;
+    }
+
+    .texto-banner {
+        font-size: 17px;
+    }
+
+    .informe {
+        font-size: 10px;
+    }
+}

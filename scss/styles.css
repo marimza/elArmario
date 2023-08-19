@@ -150,6 +150,10 @@ footer .copyright {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: box-shadow 0.3s;
+}
+.grilla-productos .contenedor-producto:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .grilla-productos .contenedor-producto .img-grilla {
   width: 11rem;
